@@ -1,9 +1,8 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import PostCard from '../components/PostCard'
-import SEO from '../components/SEO'
-import { posts, categoryMeta } from '../data/posts'
-import Link from 'next/link'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import PostCard from '../../components/PostCard'
+import SEO from '../../components/SEO'
+import { posts, categoryMeta } from '../../data/posts'
 import { useState } from 'react'
 
 export default function BlogIndex() {

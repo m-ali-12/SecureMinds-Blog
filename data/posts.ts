@@ -546,7 +546,7 @@ PUT /api/profile
 export const getPostBySlug = (slug: string) => posts.find(p => p.slug === slug)
 export const getFeaturedPosts = () => posts.filter(p => p.featured)
 export const getPostsByCategory = (category: string) => posts.filter(p => p.category === category)
-export const getAllTags = () => [...new Set(posts.flatMap(p => p.tags))]
+export const getAllTags = () => { const allTags = posts.flatMap(p => p.tags); return allTags.filter((tag, index) => allTags.indexOf(tag) === index); }
 
 export const categoryMeta = {
   ctf: { label: 'CTF Writeups', color: 'badge-ctf', icon: '🚩', desc: 'Capture The Flag challenge solutions and walkthroughs' },
